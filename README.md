@@ -1,2 +1,2 @@
-# Sistema-de-apoio-previs-o-de-demanda
+# Sistema de Apoio à previsão de demanda
 O objetivo deste repositório implementar um sistema em PHP que auxilie na previsão de demanda do setor de suprimentos de uma empresa. Será aplicado um modelo matemático já utilizado em um estudo de caso realizado sob uma empresa localizada em Belo Horizonte - MG. O modelo matemático MMMQ (Método da Média dos Mínimos Quadrados) prevendo demanda em função da base de informações de consumo realizados em uma empresa durante os últimos 12 meses.
