@@ -36,68 +36,38 @@
                           - Preço unitário: R$ <?php echo formatar_preco($p['preco']); ?> 
                           - Estoque máximo: <?php echo $p['estoquemax']; ?>                           
                         </h6>  
+                    
+                    
+                    <?php if ($consumototal){ //Se existem consumototal
+                                /*Exibindo consumo dos últimos 12 meses para cada produto*/
+                                foreach($consumototal as $x =>$value){                          
 
-                                      <?php  
-                                            // Se existem consumototal
-                                            if ($consumototal)
-                                            {
-                                              /*Exibindo cada consumo*/
-                                              foreach($consumototal as $x){
+                                  if($p['idProduto']==$value['produto_idProduto']){
 
-                                                if($p['idProduto']==$x['produto_idProduto']){
-
-                                                  if( $x['periodo'] == '2019-01-01'){
-                                                    echo 'Janeiro = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-02-01'){
-                                                    echo 'Fevereiro = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-03-01'){
-                                                    echo 'Março = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-04-01'){
-                                                    echo 'Abril = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-05-01'){
-                                                    echo 'Maio = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-06-01'){
-                                                    echo 'Junho = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-07-01'){
-                                                    echo 'Julho = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-08-01'){
-                                                    echo 'Agosto = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-09-01'){
-                                                    echo 'Setembro = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-10-01'){
-                                                    echo 'Outubro = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-11-01'){
-                                                    echo 'Novembro = ';
-                                                  }
-                                                  if( $x['periodo'] == '2019-12-01'){
-                                                    echo 'Dezembro = ';
-                                                  }
-                                                   
-                                                   echo $x['quantidadeconsumida'].'<br>';
-
-                                                  }
-                                                }                               
-                                              }                               
-                                          ?>
+                                    $consumofinal = $value['quantidadeconsumida'];
+                          
+                                    if ($zx<12) {
+                                      echo $consumofinal;
+                                      echo "<br>";
+                                      $SY += $consumofinal;
+                                      $zx++;                                    
+                                    } 
+                                  }
+                                }   
+                          echo 'Consumo total dos últimos 12 meses = '.$SY;
+                          //Reiniciando a variáveis SY e zx para que seja ultilizado no próximo laço foreach
+                          $SY = 0; 
+                          $zx = 0;  
+                      }?>
                            
 
-                        <div class="media text-muted pt-3 border-bottom">
-                            <p class="media-body pb-3 mb-0 small lh-125 text-body">                              
-                            Descrição: <?php echo $p['descricao']; ?></p>
-                        </div>                                                 
-                      </div>
-                    </div>   
-                  <?php } ?>
+            <div class="media text-muted pt-3 border-bottom">
+                <p class="media-body pb-3 mb-0 small lh-125 text-body">                              
+                Descrição: <?php echo $p['descricao']; ?></p>
+            </div>                                                 
+          </div>
+        </div>   
+      <?php } ?>
 
 
                 </div>

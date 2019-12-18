@@ -22,8 +22,8 @@ class Consumo_produto_model extends CI_Model
      * Selecionando tudo da tabela consumo_produto
      */
     function get_all_consumo_produto()
-    {
-        $this->db->order_by('periodo');
+    {   
+        $this->db->order_by('periodo','desc');
         return $this->db->get('consumo_produto')->result_array();
     }
         
