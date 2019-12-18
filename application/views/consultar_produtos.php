@@ -47,16 +47,58 @@
                                     $consumofinal = $value['quantidadeconsumida'];
                           
                                     if ($zx<12) {
-                                      echo $consumofinal;
-                                      echo "<br>";
+                                       echo $consumofinal;
+                                       echo "<br>";
                                       $SY += $consumofinal;
+                                      
+                                      // IFs ABAIXO PARA SXY OU SEJA CADA CONSUMO VEZES O SEU PESO
+                                      switch ($zx) {
+                                          case 0:
+                                          $SXY += ($consumofinal*11);
+                                          break;
+                                          case 1:
+                                          $SXY += ($consumofinal*10);
+                                          break;
+                                          case 2:
+                                          $SXY += ($consumofinal*9);
+                                          break;
+                                          case 3:
+                                          $SXY += ($consumofinal*8);
+                                          break;
+                                          case 4:
+                                          $SXY += ($consumofinal*7);
+                                          break;
+                                          case 5:
+                                          $SXY += ($consumofinal*6);
+                                          break;
+                                          case 6:
+                                          $SXY += ($consumofinal*5);
+                                          break;
+                                          case 7:
+                                          $SXY += ($consumofinal*4);
+                                          break;
+                                          case 8:
+                                          $SXY += ($consumofinal*3);
+                                          break;
+                                          case 9:
+                                          $SXY += ($consumofinal*2);
+                                          break;
+                                          case 10:
+                                          $SXY += ($consumofinal*1);
+                                          break;
+                                          case 11:
+                                          $SXY += ($consumofinal*0);
+                                          break;                                          
+                                      }
                                       $zx++;                                    
                                     } 
                                   }
                                 }   
-                          echo 'Consumo total dos últimos 12 meses = '.$SY;
+                          echo '<br> Consumo total dos últimos 12 meses = '.$SY;
+                          echo '<br> Soma total de cada consumo vezes seu peso = '.$SXY;
                           //Reiniciando a variáveis SY e zx para que seja ultilizado no próximo laço foreach
-                          $SY = 0; 
+                          $SY = 0;
+                          $SXY = 0; 
                           $zx = 0;  
                       }?>
                            

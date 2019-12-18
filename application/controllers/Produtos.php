@@ -27,18 +27,18 @@ class Produtos extends CI_Controller {
 
 		$valortotal = 0;
 		$dados['valortotal'] = $valortotal;
+		
+		// Variavei para calculo da previsão de demanda
 
 		$SY = 0;
 		$dados['SY'] = $SY;
 
+		$SXY = 0;
+		$dados['SXY'] = $SXY;
+
 		$zx = 0;
 		$dados['zx'] = $zx;
 		
-
-		// Variavei para calculo da previsão de demanda
-		
-		$SY = 0; //Soma do consumo dos últimos 12 períodos;
-		$SXY = 0; // soma de X vezes o Y ou seja cada período multippliocado pelo seu peso ;
 		$n = 12;
 		$Sx = 66;		
 		$Sx² = 506;
