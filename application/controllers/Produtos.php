@@ -38,9 +38,11 @@ class Produtos extends CI_Controller {
 
 		$zx = 0;
 		$dados['zx'] = $zx;
+
+		$SX = 66;
+		$dados['SX'] = $SX;
 		
-		$n = 12;
-		$Sx = 66;		
+		$n = 12;		
 		$Sx² = 506;
 
 		$this->load->view('components/head.php', $dados);

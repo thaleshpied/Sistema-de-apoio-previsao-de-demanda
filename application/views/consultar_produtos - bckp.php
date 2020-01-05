@@ -36,88 +36,98 @@
                           - Preço unitário: R$ <?php echo formatar_preco($p['preco']); ?> 
                           - Estoque máximo: <?php echo $p['estoquemax']; ?>                           
                         </h6>  
-                    
-                    
-                    <?php if ($consumototal){ //Se existem consumototal
-                                /*Exibindo consumo dos últimos 12 meses para cada produto*/
-                                foreach($consumototal as $x =>$value){                          
+                    <?php  
+                      // Se existem consumototal
+                      if ($consumototal)
+                      {
 
-                                  if($p['idProduto']==$value['produto_idProduto']){
+                        /*Exibindo cada consumo*/
+                        foreach($consumototal as $x =>$value){
 
-                                    $consumofinal = $value['quantidadeconsumida'];
                           
-                                    if ($zx<12) {
-                                       echo $consumofinal;
-                                       echo "<br>";
-                                      $SY += $consumofinal;
-                                      
-                                      // IFs ABAIXO PARA SXY OU SEJA CADA CONSUMO VEZES O SEU PESO
-                                      switch ($zx) {
-                                          case 0:
-                                          $SXY += ($consumofinal*11);
-                                          break;
-                                          case 1:
-                                          $SXY += ($consumofinal*10);
-                                          break;
-                                          case 2:
-                                          $SXY += ($consumofinal*9);
-                                          break;
-                                          case 3:
-                                          $SXY += ($consumofinal*8);
-                                          break;
-                                          case 4:
-                                          $SXY += ($consumofinal*7);
-                                          break;
-                                          case 5:
-                                          $SXY += ($consumofinal*6);
-                                          break;
-                                          case 6:
-                                          $SXY += ($consumofinal*5);
-                                          break;
-                                          case 7:
-                                          $SXY += ($consumofinal*4);
-                                          break;
-                                          case 8:
-                                          $SXY += ($consumofinal*3);
-                                          break;
-                                          case 9:
-                                          $SXY += ($consumofinal*2);
-                                          break;
-                                          case 10:
-                                          $SXY += ($consumofinal*1);
-                                          break;
-                                          case 11:
-                                          $SXY += ($consumofinal*0);
-                                          break;                                          
-                                      }
-                                      $zx++;                          
-                                      // EQUAÇÃO1 -> ?Y = (n * a) + (?x * b);
-                                      $ETSY = 0;
-                                      $ETSY = $SY * -3; 
 
-                                      $B1SOMA = $ETSY + $SXY;
-                                      
+                          if($p['idProduto']==$value['produto_idProduto']){
 
-
-                                    } 
-                                  }
-                                }  
-
-                          echo 'Soma de X constante 66 conferencia -> '.$SX;
-                          echo '<br> B1 soma -> '.$B1SOMA;
-                          echo '<br> SY vezes - 3 = '.$ETSY;
-                          echo '<br> Consumo total dos últimos 12 meses = '.$SY;
-                          echo '<br> Soma total de cada consumo vezes seu peso = '.$SXY;
-                          //Reiniciando a variáveis SY e zx para que seja ultilizado no próximo laço foreach
-                          $SY = 0;
-                          $SXY = 0; 
-                          $zx = 0;  
+                          $consumofinal = $value['quantidadeconsumida'];
+                          
+                          if ($zx<12) {
+                            echo $consumofinal.$SY;
+                            echo "<br>";
+                            $SY += $consumofinal;
+                          $zx++;
+                            
+                          }
+                          
 
 
 
 
+                          
 
-                      }?>
+
+
+                          /* if ($x<12) {
+                            echo '<br> meu consumo na posição'.$x.'é'.$value['quantidadeconsumida'].$value['produto_idProduto'];
+  
+                            }
+
+                            
+
+
+
+                            
+                            /*
+                            if( $x['periodo'] == '2019-01-01'){
+                              echo 'Janeiro = ';
+                            }if( $x['periodo'] == '2019-02-01'){
+                              echo 'Fevereiro = ';
+                            }if( $x['periodo'] == '2019-03-01'){
+                              echo 'Março = ';
+                            }if( $x['periodo'] == '2019-04-01'){
+                              echo 'Abril = ';
+                            }if( $x['periodo'] == '2019-05-01'){
+                              echo 'Maio = ';
+                            }if( $x['periodo'] == '2019-06-01'){
+                              echo 'Junho = ';
+                            }if( $x['periodo'] == '2019-07-01'){
+                              echo 'Julho = ';
+                            }if( $x['periodo'] == '2019-08-01'){
+                              echo 'Agosto = ';
+                            }if( $x['periodo'] == '2019-09-01'){
+                              echo 'Setembro = ';
+                            }if( $x['periodo'] == '2019-10-01'){
+                              echo 'Outubro = ';
+                            }if( $x['periodo'] == '2019-11-01'){
+                              echo 'Novembro = ';
+                            }if( $x['periodo'] == '2019-12-01'){
+                              echo 'Dezembro = ';
+                            }                              
+
+                             echo $x['quantidadeconsumida'].'<br>'; */
+                              
+
+                            
+                             // $SY = ($SY+$value['quantidadeconsumida']);
+                             
+                             
+
+
+
+                            }
+
+                            
+                          }   
+                          echo 'Consumo total dos últimos 12 meses = '.$SY;
+                          $SY = 0;                                                 
+                          
+
+                          
+
+                        }
+                        $i = 0;
+
+                                                    
+                    ?>
                            
 
             <div class="media text-muted pt-3 border-bottom">
