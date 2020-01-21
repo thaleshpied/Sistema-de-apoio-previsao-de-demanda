@@ -13,10 +13,9 @@
             Para detalhar o consumo selecione o ano
           <div class="row ">
 
-          <!-- Consumo por ano --> 
-        
+          <!-- Consumo por ano -->        
           <a class="btn btn-outline-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">2019</a>
-          <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">2020</button>          
+          <!--<button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">2020</button>-->          
         </p>
         <div class="row">
           <div class="">
@@ -54,28 +53,11 @@
                             echo $consumofinal.$SY;
                             echo "<br>";
                             $SY += $consumofinal;
-                          $zx++;
-                            
-                          }
-                          
-
-
-
-
-                          
-
-
-
-                          /* if ($x<12) {
+                          $zx++;                            
+                          }/* if ($x<12) {
                             echo '<br> meu consumo na posição'.$x.'é'.$value['quantidadeconsumida'].$value['produto_idProduto'];
   
-                            }
-
-                            
-
-
-
-                            
+                            } 
                             /*
                             if( $x['periodo'] == '2019-01-01'){
                               echo 'Janeiro = ';
@@ -101,19 +83,12 @@
                               echo 'Novembro = ';
                             }if( $x['periodo'] == '2019-12-01'){
                               echo 'Dezembro = ';
-                            }                              
-
-                             echo $x['quantidadeconsumida'].'<br>'; */
-                              
-
+                            } 
+                            echo $x['quantidadeconsumida'].'<br>'; */
                             
                              // $SY = ($SY+$value['quantidadeconsumida']);
                              
-                             
-
-
-
-                            }
+                              }
 
                             
                           }   
@@ -160,7 +135,7 @@
     
 
 
-<div class="row ">
+                <div class="row ">
                   <!-- Exibindo produtos -->
                   <?php foreach($produtos as $p){ ?>
 

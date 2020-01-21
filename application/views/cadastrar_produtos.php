@@ -7,8 +7,7 @@
 				<input class="form-control" id="nome" name="nome" type="text" required placeholder="Nome do Produto" widht="100px" maxlength="45" />
 			</div>
 				
-				<!-- CRIAR BACK END DOS CAMPOS ABAIXO -->
-				
+				<!-- CRIAR BACK END DOS CAMPOS ABAIXO -->				
 				<div class="input-div" id="input-tipo">Tipo da Unidade:
 				<input class="form-control" id="tipo" name="tipo" type="text" required placeholder="Apenas letras, exemplo: cx, pct, frd." widht="50px" required min="0" minlength="2" maxlength="10" />
 				</div>
@@ -21,9 +20,7 @@
 				<div class="input-div" id="input-estoquemax">Estoque Máximo:
 				<input class="form-control" id="estoquemax" name="estoquemax" type="number" placeholder="Apenas número" widht="50px" required min="0" minlength="3" maxlength="10" />
 				</div>
-
 				<!-- CRIAR BACK END DOS CAMPOS ACIMA -->
-
 
 			<div class="input-div" id="input-valor">Valor da unidade em R$:&nbsp;&nbsp;&nbsp;&nbsp;
 				<input class="form-control" id="preco" name="preco" type="text" required placeholder="Apenas números" widht="60px" required />

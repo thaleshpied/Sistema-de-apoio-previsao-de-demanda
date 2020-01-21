@@ -1,27 +1,17 @@
-
-
 <div class="row d-flex justify-content-center">
-
-<?php  
-	// Se existem consumototal
-	if ($consumototal)
-	{
-
-		/*Exibindo cada pedido*/
-		foreach($consumototal as $p)
+	<?php  
+		// Se existem consumototal
+		if ($consumototal)
 		{
-     		echo $p['produto_idProduto'].'<br>'; 
-	   		echo $p['quantidadeconsumida'].'<br>';
-			echo $p['periodo'].'<br>'; 
-
-
-
-		} 
-	
-	} 
-	
-?>
-
+			/*Exibindo cada consumo*/
+			foreach($consumototal as $p)
+			{
+	     		echo $p['produto_idProduto'].'<br>'; 
+		   		echo $p['quantidadeconsumida'].'<br>';
+				echo $p['periodo'].'<br>'; 
+			}	
+		} 	
+	?>
 </div>
 
 <script type="text/javascript">
