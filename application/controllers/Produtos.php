@@ -10,8 +10,7 @@ class Produtos extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Produto_model');
 		$this->load->model('Consumo_produto_model');
-		$this->load->helper('funcoes_helper');
-		
+		$this->load->helper('funcoes_helper');		
 	}
 
 	// Página Inicial 
@@ -50,71 +49,66 @@ class Produtos extends CI_Controller {
 		$this->load->view('dashboard.php', $dados);
 		$this->load->view('submenuprodutos.php');
 		$this->load->view('consultar_produtos.php');
-		$this->load->view('components/foother.php', $dados);
-		
-
-		
-		
+		$this->load->view('components/foother.php', $dados);		
 	}
 
 	public function cadastrar()
-		{	
-			$dados['title'] = "Cadastrar Produtos";
-			$produtos = $this->Produto_model->get_all_produto();
-			$dados['produtos'] = $produtos;
-			$quantidadetotal = $this->Produto_model->cont_all_produto();
-			$dados['quantidadetotal'] = $quantidadetotal;
+	{	
+		$dados['title'] = "Cadastrar Produtos";
+		$produtos = $this->Produto_model->get_all_produto();
+		$dados['produtos'] = $produtos;
+		$quantidadetotal = $this->Produto_model->cont_all_produto();
+		$dados['quantidadetotal'] = $quantidadetotal;
 
-			$valortotal = 0;
- 			$dados['valortotal'] = $valortotal;	
+		$valortotal = 0;
+		$dados['valortotal'] = $valortotal;	
 
-			$this->load->view('components/head.php', $dados);
-			$this->load->view('components/nav.php', $dados);
-			$this->load->view('dashboard.php', $dados);
-			$this->load->view('submenuprodutos.php');
-			$this->load->view('cadastrar_produtos.php', $dados);
-			$this->load->view('components/foother.php', $dados);
+		$this->load->view('components/head.php', $dados);
+		$this->load->view('components/nav.php', $dados);
+		$this->load->view('dashboard.php', $dados);
+		$this->load->view('submenuprodutos.php');
+		$this->load->view('cadastrar_produtos.php', $dados);
+		$this->load->view('components/foother.php', $dados);
 	}
 
 	public function editar()
-		{	
-			$dados['title'] = "Editar Produtos";
-			$produtos = $this->Produto_model->get_all_produto();
-			$dados['produtos'] = $produtos;
-			$quantidadetotal = $this->Produto_model->cont_all_produto();
-			$dados['quantidadetotal'] = $quantidadetotal;
-			$valortotal = 0;
-			$dados['valortotal'] = $valortotal;	
+	{	
+		$dados['title'] = "Editar Produtos";
+		$produtos = $this->Produto_model->get_all_produto();
+		$dados['produtos'] = $produtos;
+		$quantidadetotal = $this->Produto_model->cont_all_produto();
+		$dados['quantidadetotal'] = $quantidadetotal;
+		$valortotal = 0;
+		$dados['valortotal'] = $valortotal;	
 
-			$this->load->view('components/head.php', $dados);
-			$this->load->view('components/nav.php', $dados);
-			$this->load->view('dashboard.php', $dados);
-			$this->load->view('submenuprodutos.php');
-			$this->load->view('editar_produtos.php', $dados);
-			$this->load->view('components/foother.php', $dados);
+		$this->load->view('components/head.php', $dados);
+		$this->load->view('components/nav.php', $dados);
+		$this->load->view('dashboard.php', $dados);
+		$this->load->view('submenuprodutos.php');
+		$this->load->view('editar_produtos.php', $dados);
+		$this->load->view('components/foother.php', $dados);
 	}
 
 	public function consumo()
-		{	
-			$dados['title'] = "Consumo de Produtos";
-			$produtos = $this->Produto_model->get_all_produto();
-			$dados['produtos'] = $produtos;
-			$quantidadetotal = $this->Produto_model->cont_all_produto();
-			$dados['quantidadetotal'] = $quantidadetotal;
+	{	
+		$dados['title'] = "Consumo de Produtos";
+		$produtos = $this->Produto_model->get_all_produto();
+		$dados['produtos'] = $produtos;
+		$quantidadetotal = $this->Produto_model->cont_all_produto();
+		$dados['quantidadetotal'] = $quantidadetotal;
 
-			$consumototal = $this->Consumo_produto_model->get_all_consumo_produto();
-			$dados['consumototal'] = $consumototal;
+		$consumototal = $this->Consumo_produto_model->get_all_consumo_produto();
+		$dados['consumototal'] = $consumototal;
 
-			$valortotal = 0;
-			$dados['valortotal'] = $valortotal;	
+		$valortotal = 0;
+		$dados['valortotal'] = $valortotal;	
 
-
-			$this->load->view('components/head.php', $dados);
-			$this->load->view('components/nav.php', $dados);
-			$this->load->view('dashboard.php', $dados);
-			$this->load->view('submenuprodutos.php');
-			$this->load->view('consumo_produtos.php', $dados);
-			$this->load->view('components/foother.php', $dados);
+		$this->load->view('components/head.php', $dados);
+		$this->load->view('components/nav.php', $dados);
+		$this->load->view('dashboard.php', $dados);
+		$this->load->view('submenuprodutos.php');
+		$this->load->view('consumo_produtos.php', $dados);
+		$this->load->view('components/foother.php', $dados);
 	}
 
 	public function add()
@@ -177,15 +171,4 @@ class Produtos extends CI_Controller {
 			echo json_encode($mensagem);
 			return true;
 	}
-
-	 
-
-
-
-
-
-
-
-
-
 }

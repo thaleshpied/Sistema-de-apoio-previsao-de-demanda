@@ -26,10 +26,7 @@ class Pagina extends CI_Controller {
 		$this->load->view('components/nav.php', $dados);
 		$this->load->view('dashboard.php', $dados);
 		$this->load->view('index.php', $dados);
-		$this->load->view('components/foother.php', $dados);
-
-
-		
+		$this->load->view('components/foother.php', $dados);		
 	}
 
 }
