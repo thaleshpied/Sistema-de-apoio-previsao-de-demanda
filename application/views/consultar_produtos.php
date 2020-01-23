@@ -32,9 +32,17 @@
                         <h6 style = "color: black;" class="border-gray pb-2 mb-0">
 
                           Código: <?php echo $p['idProduto']; ?> <?php echo $p['nome']; ?>
-                          - Estoque Atual:  <?php echo $p['quantidade'];?>
-                          - Preço unitário: R$ <?php echo formatar_preco($p['preco']); ?> 
-                          - Estoque máximo: <?php echo $p['estoquemax']; ?>                           
+                          - Estoque Atual:  <?php echo $p['quantidade'];?>                          
+                          - Preço unitário: R$ <?php echo formatar_preco($p['preco']); ?> <br>
+                          Estoque máximo: <?php echo $p['estoquemax']; ?>                           
+                          - Valor Total em estoque: 
+                            <?php
+
+                            $valortotalemestoque = ($p['quantidade']*$p['preco']);
+
+
+                            echo formatar_preco ($valortotalemestoque);
+                            ?>
                         </h6>  
                     
                     
@@ -47,8 +55,8 @@
                                     $consumofinal = $value['quantidadeconsumida'];
                           
                                     if ($zx<12) {
-                                       echo $consumofinal;
-                                       echo "<br>";
+                                       //echo $consumofinal;
+                                       //echo "<br>";
                                       $SY += $consumofinal;
                                       
                                       // IFs ABAIXO PARA SXY OU SEJA CADA CONSUMO VEZES O SEU PESO
@@ -102,6 +110,8 @@
                                     } 
                                   }
                                 }  
+
+
 
                           echo 'Soma de X constante 66 conferencia -> '.$SX;
                           echo '<br> B1 soma -> '.$B1SOMA;
