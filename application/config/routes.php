@@ -65,6 +65,9 @@ $route['editar_produtos'] = 'Produtos/editar';
 // Consumo produtos
 $route['consumo_produtos'] = 'Produtos/consumo';
 
+// Recursos de business intelligence BI
+$route['business_intelligence'] = 'Gestao/bi';
+
 // Rota do erro 404.
 $route['404_override'] = '';
 

@@ -20,8 +20,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="./">
-          
+        <a class="nav-link" href="./">          
           <span>Início</span></a>
       </li>
 
@@ -73,6 +72,11 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+          <a class="nav-link" href="business_intelligence">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>BI</span></a>
+      </li>
       <li class="nav-item">
           <a class="nav-link" href="consultar_produtos">
           <i class="fas fa-fw fa-folder"></i>
