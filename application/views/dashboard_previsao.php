@@ -21,7 +21,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Previsto</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Produtos em estoque</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php echo $quantidadetotal ?> </div>
                     </div>
                     <div class="col-auto">
@@ -38,7 +38,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Valor em estoque</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Valor previsto</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">R$<?php echo formatar_preco ($valortotal); ?></div>
                     </div>
                     <div class="col-auto">

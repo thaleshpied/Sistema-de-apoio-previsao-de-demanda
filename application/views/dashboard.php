@@ -95,10 +95,6 @@
 
           <!-- Content Row -->
 
-          <div class="row">
-
-            
-          </div>
 
       <!-- End of Main Content -->
 

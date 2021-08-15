@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Icone site (Fav Icon)-->
   <link rel="shortcut icon" href="<?=base_url('application/views/assets/img/icone.ico')?>" type="image/x-icon">
