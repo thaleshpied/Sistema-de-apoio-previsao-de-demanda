@@ -82,6 +82,11 @@
           <i class="fas fa-fw fa-folder"></i>
           <span>Produtos</span></a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" href="previsao_demanda">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Previsã de Demanda</span></a>
+      </li>
 
       <!-- Nav Item - Charts 
       <li class="nav-item">

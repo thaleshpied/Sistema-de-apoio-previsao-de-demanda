@@ -68,6 +68,9 @@ $route['consumo_produtos'] = 'Produtos/consumo';
 // Recursos de business intelligence BI
 $route['business_intelligence'] = 'Gestao/bi';
 
+// Previsão de demanda
+$route['previsao_demanda'] = 'Previsao/index';
+
 // Rota do erro 404.
 $route['404_override'] = '';
 
