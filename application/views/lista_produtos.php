@@ -99,23 +99,33 @@
                                           break;                                          
                                       }
                                       $zx++;                          
-                                      // EQUAÇÃO1 -> ?Y = (n * a) + (?x * b);
-                                      $ETSY = 0;
-                                      $ETSY = $SY * -3; 
-
-                                      $B1SOMA = $ETSY + $SXY;
                                       
-
-
                                     } 
-                                  }
+
+                                    // APRESENTANDO OS VALORES DE SOMA SOMENTE NO ÚLTIMO LAÇO
+                                    if ($zx == 12) {
+
+                                      /* 
+
+                                      EQUAÇÃO 1: ∑Y = (n . a) + ( ∑x . b) 
+                                      EQUAÇÃO 2: ∑X.Y = (Sx . a) + (s x² + b)
+
+                                      */
+
+                                      $B = (($SY*11)+($SXY*-2))/-286;
+                                      $A = ($SY-(66*$B))/12;
+                                      $PREVISAO = $A + ($B*12);
+
+                                      echo "<br> Previsão para o próximo mês = ".round($PREVISAO);
+
+                                    }
+
+
+                                  }                                  
                                 }  
-                          echo 'Soma de X constante 66 conferencia -> '.$SX;
-                          echo '<br> B1 soma -> '.$B1SOMA;
-                          echo '<br> SY vezes - 3 = '.$ETSY;
-                          echo '<br> Consumo total dos últimos 12 meses = '.$SY;
-                          echo '<br> Soma total de cada consumo vezes seu peso = '.$SXY;
+                         
                           //Reiniciando a variáveis SY e zx para que seja ultilizado no próximo laço foreach
+                          
                           $SY = 0;
                           $SXY = 0; 
                           $zx = 0;  
@@ -132,6 +142,14 @@
       <?php } ?>
                 </div>
                 </div> <!--TERMINA EXIBIÇÃO DO CONSUMO DE 2019 -->
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                Consumo 2020 <br>
+                Ainda não há registros.
               </div>
             </div>
           </div>
