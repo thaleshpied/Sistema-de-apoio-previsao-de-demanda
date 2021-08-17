@@ -3,18 +3,24 @@
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Previsão de demanda - <small> mês xx-xxxx</small>
+          Visão detalhada - <small> com registro de consumo</small>
         </button>
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
+            Para detalhar o consumo selecione o ano
           <div class="row ">
-            <button class="btn btn-outline-info mb-3" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Exportar Previsão</button>
+
+          <!-- Consumo por ano --> 
+        
+          <a class="btn btn-outline-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">2019</a>
+          <!--<button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">2020</button>-->          
+        </p>
         <div class="row">
           <div class="">
-            <div class="collapse multi-collapse show" id="multiCollapseExample1">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
               <div class="card card-body">
                 <div class="row ">
                   <!-- Exibindo produtos -->
@@ -25,8 +31,7 @@
                       <div class="my-3 p-3 rounded box-shadow">
                         <h6 style = "color: black;" class="border-gray pb-2 mb-0">
 
-                          Código: <?php echo $p['idProduto']; ?> 
-                          - Nome: <?php echo $p['nome']; ?>
+                          Código: <?php echo $p['idProduto']; ?> <?php echo $p['nome']; ?>
                           - Estoque Atual:  <?php echo $p['quantidade'];?>                          
                           - Preço unitário: R$ <?php echo formatar_preco($p['preco']); ?> <br>
                           Estoque máximo: <?php echo $p['estoquemax']; ?>                           
@@ -38,7 +43,6 @@
 
                             echo formatar_preco ($valortotalemestoque);
                             ?>
-
                         </h6>  
                     
                     
@@ -96,33 +100,33 @@
                                       }
                                       $zx++;                          
                                       
-                                    } 
-
-                                    // APRESENTANDO OS VALORES DE SOMA SOMENTE NO ÚLTIMO LAÇO
-                                    if ($zx == 12) {
-
                                       /* 
 
                                       EQUAÇÃO 1: ∑Y = (n . a) + ( ∑x . b) 
                                       EQUAÇÃO 2: ∑X.Y = (Sx . a) + (s x² + b)
+                                      Criar um sistema matemático isolando as variáveis multiplicando por -3 
+                                      
+                                      N = 12 / TN = -36
+                                      SX = 66 / TSX = -198
 
                                       */
 
-                                      $B = (($SY*11)+($SXY*-2))/-286;
-                                      $A = ($SY-(66*$B))/12;
-                                      $PREVISAO = $A + ($B*12);
 
-                                      //Apresentando a quantidade prevista e indicando o tipo do produto
-                                      echo "<br> Previsão para o próximo mês = ".round($PREVISAO) .$p['tipo'];
-                                      
-                                    }
+                                      $TSY = $SY * (-3); 
+                                      $TN = -36;// Tranformação da variável N com *-3
+                                      $TSX = -198;
 
+                                      /*
+                                      $VAR1EQ = $TSY + $SXY;
+                                      $VAR2EQ = $EN + $ESX;*/
+                                      $VAR3EQ = 0;
 
-                                  }                                  
+                                    } 
+                                  }
                                 }  
-                         
+                          echo "<br>========================================================";
+                          echo '<br> Primeira variável da equação '.$TSY;
                           //Reiniciando a variáveis SY e zx para que seja ultilizado no próximo laço foreach
-                          
                           $SY = 0;
                           $SXY = 0; 
                           $zx = 0;  
@@ -131,20 +135,41 @@
                            
 
             <div class="media text-muted pt-3 border-bottom">
-                <p class="media-body pb-3 mb-0 small lh-125 text-body"> 
+                <p class="media-body pb-3 mb-0 small lh-125 text-body">                              
+                Descrição: <?php echo $p['descricao']; ?></p>
             </div>                                                 
           </div>
         </div>   
       <?php } ?>
                 </div>
-                </div> 
+                </div> <!--TERMINA EXIBIÇÃO DO CONSUMO DE 2019 -->
               </div>
             </div>
           </div>
         </div>
       </div>
 
-  
+  <div class="row ">
+    <!-- Exibindo produtos -->
+    <?php foreach($produtos as $p){ ?>
+     
+      <div class="col-xs-12 col-md-12">
+        <div class="my-3 p-3 rounded box-shadow">
+          <h6 style = "color: black;" class="border-gray pb-2 mb-0">
+
+            Código: <?php echo $p['idProduto']; ?> <?php echo $p['nome']; ?>
+            - Estoque Atual:  <?php echo $p['quantidade'];?>
+            - Preço unitário: R$ <?php echo formatar_preco($p['preco']); ?> 
+            - Estoque máximo: <?php echo $p['estoquemax']; ?>                           
+          </h6>  
+          <div class="media text-muted pt-3 border-bottom">
+              <p class="media-body pb-3 mb-0 small lh-125 text-body">                              
+              Descrição: <?php echo $p['descricao']; ?></p>
+          </div>                                                 
+        </div>
+      </div>   
+    <?php } ?>
+  </div>
 </div> <!--TERMINA EXIBIÇÃO DO CONSUMO DE 2019 -->
 </div>
 </div> 
