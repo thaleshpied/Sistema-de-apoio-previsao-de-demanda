@@ -15,7 +15,7 @@
 
           <!-- Consumo por ano --> 
         
-          <a class="btn btn-outline-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">2019</a>
+          <a class="btn btn-outline-info mt-2 mb-2" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">2019</a>
           <!--<button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">2020</button>-->          
         </p>
         <div class="row">
@@ -99,25 +99,13 @@
                                           break;                                          
                                       }
                                       $zx++;                          
-                                      // EQUAÇÃO1 -> ?Y = (n * a) + (?x * b);
-                                      $ETSY = 0;
-                                      $ETSY = $SY * -3; 
-
-                                      $B1SOMA = $ETSY + $SXY;
-                                      
-
-
+                          
+                                    echo '<br> Consumo há '.$zx; echo ' meses = ' .$consumofinal;
                                     } 
                                   }
-                                }  
+                                }
+                          echo '<br><br> Consumo total dos últimos 12 meses = '.$SY .$p['tipo'];;
 
-
-
-                          echo 'Soma de X constante 66 conferencia -> '.$SX;
-                          echo '<br> B1 soma -> '.$B1SOMA;
-                          echo '<br> SY vezes - 3 = '.$ETSY;
-                          echo '<br> Consumo total dos últimos 12 meses = '.$SY;
-                          echo '<br> Soma total de cada consumo vezes seu peso = '.$SXY;
                           //Reiniciando a variáveis SY e zx para que seja ultilizado no próximo laço foreach
                           $SY = 0;
                           $SXY = 0; 

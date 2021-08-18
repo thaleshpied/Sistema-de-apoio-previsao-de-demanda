@@ -19,7 +19,6 @@
                 <div class="row ">
                   <!-- Exibindo produtos -->
                   <?php foreach($produtos as $p){ ?>
-
                     
                     <div class="col-xs-12 col-md-12">
                       <div class="my-3 p-3 rounded box-shadow">
@@ -32,15 +31,10 @@
                           Estoque máximo: <?php echo $p['estoquemax']; ?>                           
                           - Valor Total em estoque: 
                             <?php
-
                             $valortotalemestoque = ($p['quantidade']*$p['preco']);
-
-
                             echo formatar_preco ($valortotalemestoque);
                             ?>
-
-                        </h6>  
-                    
+                        </h6>                    
                     
                     <?php if ($consumototal){ //Se existem consumototal
                                 /*Exibindo consumo dos últimos 12 meses para cada produto*/
