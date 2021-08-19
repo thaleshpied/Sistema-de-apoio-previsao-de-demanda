@@ -21,12 +21,7 @@
 				<div class="input-div" id="input-tipo">Tipo da Unidade:
 				<input class="form-control" id="tipo" name="tipo" type="text" required placeholder="Apenas letras, exemplo: cx, pct, frd." widht="50px" required min="0" minlength="2" maxlength="10" />
 				</div>
-				<!-- 
-				<div class="input-div" id="input-codigoProduto">Código do produto:
-				<br><input id="codmanual" onclick="codmanual()" type="checkbox" name=""> Código manual
-				<input class="form-control" id="codigoProduto" name="codigoProduto" type="number" placeholder="Apenas número" widht="50px" required min="0" minlength="3" maxlength="10" disabled="" />
-				</div> -->
-
+				
 				<div class="input-div" id="input-estoquemax">Estoque Máximo:
 				<input class="form-control" id="estoquemax" name="estoquemax" type="number" placeholder="Apenas número" widht="50px" required min="0" minlength="3" maxlength="10" />
 				</div>
@@ -41,11 +36,42 @@
 			<div class="input-div" id="input-descrição">Descrição:&nbsp;&nbsp;
 				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
 			</div>
+			<!-- CONSUMO -->
+
+
+			<div class="input-div" id="input-descrição">Consumo:&nbsp;&nbsp;
+				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
+			</div>
+			<div class="input-div" id="input-descrição">Consumo:&nbsp;&nbsp;
+				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
+			</div>
+			<div class="input-div" id="input-descrição">Consumo:&nbsp;&nbsp;
+				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
+			</div>
+			
+			<?php if ($consumototal){ //Se existem consumototal
+                                /*Exibindo consumo dos últimos 12 meses para cada produto*/
+                                foreach($consumototal as $x =>$value){                          
+
+                                  if($p['idProduto']==$value['produto_idProduto']){
+
+                                    $consumofinal = $value['quantidadeconsumida'];
+                          
+                                    if ($zx<12) {
+                                                                
+                          
+                                    } 
+                                  }
+                                }
+                                }?>
+
+
+
 			<div class="input-div" id="input-valor">Imagem:&nbsp;&nbsp;&nbsp;&nbsp;
 				<select class="form-control" id="imagem" name="imagem">
 					<option>Selecione</option>
 					<option value="produto.png">
-						Protudo
+						Produto
 					</option>
 				</select>
 			</div>		

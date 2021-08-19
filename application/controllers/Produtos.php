@@ -79,7 +79,10 @@ class Produtos extends CI_Controller {
 		$quantidadetotal = $this->Produto_model->cont_all_produto();
 		$dados['quantidadetotal'] = $quantidadetotal;
 		$valortotal = 0;
-		$dados['valortotal'] = $valortotal;	
+		$dados['valortotal'] = $valortotal;
+		$consumototal = $this->Consumo_produto_model->get_all_consumo_produto();
+		$dados['consumototal'] = $consumototal;
+	
 
 		$this->load->view('components/head.php', $dados);
 		$this->load->view('components/nav.php', $dados);
