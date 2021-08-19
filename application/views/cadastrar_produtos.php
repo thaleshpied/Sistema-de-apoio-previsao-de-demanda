@@ -93,11 +93,12 @@ $(document).ready(function(){
 	});
 
 	// Mascaras nos inputs
-	$('#preco').mask('#.##0,00', {reverse: true});
+	$('#preco').mask('R$ 000,00', );
 
 });
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
 </body>
 </html>
