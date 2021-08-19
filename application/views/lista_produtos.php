@@ -20,20 +20,15 @@
                   <!-- Exibindo produtos -->
                   <?php foreach($produtos as $p){ ?>
                     
-                    <div class="col-xs-12 col-md-12">
+                    <div class="col-xs-12 col-md-12 previsaoitem">
                       <div class="my-3 p-3 rounded box-shadow">
                         <h6 style = "color: black;" class="border-gray pb-2 mb-0">
-
-                          Código: <?php echo $p['idProduto']; ?> 
-                          - Nome: <?php echo $p['nome']; ?>
-                          - Estoque Atual:  <?php echo $p['quantidade'];?>                          
-                          - Preço unitário: R$ <?php echo formatar_preco($p['preco']); ?> <br>
-                          Estoque máximo: <?php echo $p['estoquemax']; ?>                           
-                          - Valor Total em estoque: 
-                            <?php
-                            $valortotalemestoque = ($p['quantidade']*$p['preco']);
-                            echo formatar_preco ($valortotalemestoque);
-                            ?>
+ 
+                          Nome: <?php echo $p['nome']; ?>
+                          - Estoque:  <?php echo $p['quantidade'];?>                          
+                          - Estoque máximo: <?php echo $p['estoquemax']; ?>                           
+                          - Valor unitário: R$ <?php echo formatar_preco($p['preco']); ?>
+                          
                         </h6>                    
                     
                     <?php if ($consumototal){ //Se existem consumototal
@@ -106,9 +101,10 @@
                                       $A = ($SY-(66*$B))/12;
                                       $PREVISAO = $A + ($B*12);
 
-                                      //Apresentando a quantidade prevista e indicando o tipo do produto
-                                      echo "<br> Previsão para o próximo mês = ".round($PREVISAO) .$p['tipo'];
                                       
+                                      //Apresentando a quantidade prevista e indicando o tipo do produto
+                                      echo "<h5>Previsão para o próximo mês = ".round($PREVISAO) .$p['tipo']; 
+                                      echo "</h5>";
                                     }
 
 
