@@ -1,5 +1,35 @@
 <div class="cadastroproduto" id="cadastro-box">
 	<div id="cadastro-box-interno">
+
+		<!-- Exibindo produtos -->
+        <?php foreach($produtos as $p){ ?>
+
+          <!-- Produto <?php echo $p['idProduto']; ?> -->
+          <div class="col-xs-12 col-md-6 border">
+          		
+          	<img src="<?php echo base_url('application/views/assets/img/'). $p['imagem'];?>" class="img-fluid w-25 p-2" alt="Imagem do Produto">
+            
+            <div class="my-3 p-3 rounded box-shadow">
+              <h6 style = "color: black;" class="pb-2 mb-0">
+                Código: <?php echo $p['idProduto']; ?> <?php echo $p['nome']; ?>                  
+              </h6>
+              <div class="media text-muted pt-3">
+                  
+                  	<div class="input-div" id="input-valor">Valor atual: R$ <?php echo formatar_preco($p['preco']) ?>:&nbsp;&nbsp;&nbsp;&nbsp;
+											<input class="form-control" id="preco" name="preco" type="text" required  widht="60px" placeholder="R$ <?php echo formatar_preco($p['preco']) ?>" required />
+										</div>
+
+                  Descrição: <?php echo $p['descricao']; ?>
+                  Estoque Atual:  <?php echo $p['quantidade'];?>
+              </div>
+            </div>
+          </div>   
+        <?php } ?>
+
+
+
+
+
 		<form method="post" id="form-cadastro">
 		<fieldset>
 			<div id="cadastro-produto-label">Manutenção de Produtos</div>
@@ -49,21 +79,23 @@
 				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
 			</div>
 			
-			<?php if ($consumototal){ //Se existem consumototal
-                                /*Exibindo consumo dos últimos 12 meses para cada produto*/
-                                foreach($consumototal as $x =>$value){                          
+				<?php if ($consumototal){ //Se existem consumototal
+            /*Exibindo consumo dos últimos 12 meses para cada produto*/
+            foreach($consumototal as $x =>$value){                          
 
-                                  if($p['idProduto']==$value['produto_idProduto']){
+              if($p['idProduto']==$value['produto_idProduto']){
 
-                                    $consumofinal = $value['quantidadeconsumida'];
-                          
-                                    if ($zx<12) {
-                                                                
-                          
-                                    } 
-                                  }
-                                }
-                                }?>
+                $consumofinal = $value['quantidadeconsumida'];
+      
+                if ($zx<12) {
+                     
+      
+                } 
+                     $zx++; 
+                     echo "Consumo" .$consumofinal;                       
+              }
+            }
+            }?>
 
 
 
