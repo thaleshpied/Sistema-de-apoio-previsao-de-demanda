@@ -1,120 +1,51 @@
-<div class="cadastroproduto" id="cadastro-box">
-	<div id="cadastro-box-interno">
 
-		<!-- Exibindo produtos -->
+				<!-- Exibindo produtos -->
         <?php foreach($produtos as $p){ ?>
 
-          <!-- Produto <?php echo $p['idProduto']; ?> -->
-          <div class="col-xs-12 col-md-6 border">
+          <div class="col-12 border row" id="editarproduto">
           		
-          	<img src="<?php echo base_url('application/views/assets/img/'). $p['imagem'];?>" class="img-fluid w-25 p-2" alt="Imagem do Produto">
-            
-            <div class="my-3 p-3 rounded box-shadow">
-              <h6 style = "color: black;" class="pb-2 mb-0">
-                Código: <?php echo $p['idProduto']; ?> <?php echo $p['nome']; ?>                  
-              </h6>
-              <div class="media text-muted pt-3">
-                  
-                  	<div class="input-div" id="input-valor">Valor atual: R$ <?php echo formatar_preco($p['preco']) ?>:&nbsp;&nbsp;&nbsp;&nbsp;
-											<input class="form-control" id="preco" name="preco" type="text" required  widht="60px" placeholder="R$ <?php echo formatar_preco($p['preco']) ?>" required />
+          		<!-- IMAGEM DO PRODUTO -->
+          		<div class="col-4">
+          			<img src="<?php echo base_url('application/views/assets/img/'). $p['imagem'];?>" class="img-fluid p-2" alt="Imagem do Produto">
+          		</div>
+          		
+          		<!-- DADOS DO PRODUTO -->
+          		<div class="col-8">
+          			<form method="post" id="form-cadastro">
+          			<div class="my-3 p-3 rounded box-shadow">
+          				<h6 id="idProduto"> <?php echo $p['idProduto']; ?> </h6>
+              			<div class="input-div" id="input-valor">
+											<input class="form-control" id="nome" name="nome" type="text" required  widht="60px" placeholder="Nome: <?php echo $p['nome']; ?>" required />
 										</div>
 
-                  Descrição: <?php echo $p['descricao']; ?>
-                  Estoque Atual:  <?php echo $p['quantidade'];?>
-              </div>
-            </div>
-          </div>   
-        <?php } ?>
+										<div class="input-div pt-1" id="input-valor">
+											<input class="form-control" id="descricao" name="descricao" type="text" required  widht="60px" placeholder="Descrição: <?php echo $p['descricao']; ?>" required />
+										</div>
 
+										<div class="input-div pt-1" id="input-valor">
+											<input class="form-control" id="quantidade" name="quantidade" type="text" required  widht="60px" placeholder="Estoque: <?php echo $p['quantidade']; ?>" required />
+										</div>
 
+                  	<div class="input-div pt-1" id="input-valor">
+											<input class="form-control" id="preco" name="preco" type="text" required  widht="60px" placeholder="Valor: R$ <?php echo formatar_preco($p['preco']) ?>" required />
+										</div>
 
+                  	<div class="input-div pt-1" id="input-valor">
+											<button class="btn btn-outline-info mb-3" type="submit" name="Alterar" value="Alterar" id="botao">Salvar</button>
+										</div>
+            		</div>
+            	</form>
+          		</div>   
+        		</div>
+        <?php } ?>		
+          		
+          	
+<!-- RETORNAR AO INÍCIO DA PÁGINA -->            
+<a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
+	<i class="fas fa-angle-up"></i>
+</a>
 
-
-		<form method="post" id="form-cadastro">
-		<fieldset>
-			<div id="cadastro-produto-label">Manutenção de Produtos</div>
-			<div class="input-div" id="input-produto">  Produto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<select class="form-control" id="idProduto" name="idProduto" onchange="carregarDados()">
-					<option>Selecione</option>
-					<?php 
-						foreach ($produtos as $p) {
-							echo '<option value="'.$p['idProduto'].'">'.$p['nome'].'</option>';
-						}
-					 ?>
-				</select>
-			</div>
-			<div class="input-div" id="input-produto">  Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input class="form-control" id="nome" name="nome" type="text" required placeholder="Nome do Produto" widht="100px" maxlength="45" />
-			</div>
-			<!-- CRIAR BACK END DOS CAMPOS ABAIXO -->
-				
-				<div class="input-div" id="input-tipo">Tipo da Unidade:
-				<input class="form-control" id="tipo" name="tipo" type="text" required placeholder="Apenas letras, exemplo: cx, pct, frd." widht="50px" required min="0" minlength="2" maxlength="10" />
-				</div>
-				
-				<div class="input-div" id="input-estoquemax">Estoque Máximo:
-				<input class="form-control" id="estoquemax" name="estoquemax" type="number" placeholder="Apenas número" widht="50px" required min="0" minlength="3" maxlength="10" />
-				</div>
-
-				<!-- CRIAR BACK END DOS CAMPOS ACIMA -->			
-			<div class="input-div" id="input-valor">Valor R$:&nbsp;&nbsp;&nbsp;&nbsp;
-				<input class="form-control" id="preco" name="preco" type="text" required placeholder="Apenas números" widht="60px" required />
-			</div>
-			<div class="input-div" id="input-valor">Quantidade:
-				<input class="form-control" id="quantidade" name="quantidade" type="number" required placeholder="Apenas números" widht="50px" required min="0" minlength="3" maxlength="10" />
-			</div>
-			<div class="input-div" id="input-descrição">Descrição:&nbsp;&nbsp;
-				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
-			</div>
-			<!-- CONSUMO -->
-
-
-			<div class="input-div" id="input-descrição">Consumo:&nbsp;&nbsp;
-				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
-			</div>
-			<div class="input-div" id="input-descrição">Consumo:&nbsp;&nbsp;
-				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
-			</div>
-			<div class="input-div" id="input-descrição">Consumo:&nbsp;&nbsp;
-				<input class="form-control" id="descricao" name="descricao" type="text" required placeholder="Descrição do Produto" widht="190px" maxlength="100" />﻿
-			</div>
-			
-				<?php if ($consumototal){ //Se existem consumototal
-            /*Exibindo consumo dos últimos 12 meses para cada produto*/
-            foreach($consumototal as $x =>$value){                          
-
-              if($p['idProduto']==$value['produto_idProduto']){
-
-                $consumofinal = $value['quantidadeconsumida'];
-      
-                if ($zx<12) {
-                     
-      
-                } 
-                     $zx++; 
-                     echo "Consumo" .$consumofinal;                       
-              }
-            }
-            }?>
-
-
-
-			<div class="input-div" id="input-valor">Imagem:&nbsp;&nbsp;&nbsp;&nbsp;
-				<select class="form-control" id="imagem" name="imagem">
-					<option>Selecione</option>
-					<option value="produto.png">
-						Produto
-					</option>
-				</select>
-			</div>		
-			<div id="botoes">
-				<input class="btn btn-info" type="submit" name="Alterar" value="Alterar" id="botao">
-			</div>
-		</fieldset>
-		</form>
-	</div>
-</div>
-
+<!-- SCRIPT PARA SALVAR OS CAMPOS EDITADOS DO PRODUTO -->
 <script type="text/javascript">
 
 $(document).ready(function(){
