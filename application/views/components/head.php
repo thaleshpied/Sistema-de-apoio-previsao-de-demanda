@@ -34,5 +34,8 @@
   <!-- Custom scripts for all pages-->
   <script src="./template/js/sb-admin-2.min.js"></script>
 
+  <!-- SCRIPT PARA MÁSCARA DE VALORES EM REASI (R$) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
 
 </head>
