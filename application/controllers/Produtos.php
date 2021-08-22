@@ -86,7 +86,6 @@ class Produtos extends CI_Controller {
 
 		$this->load->view('components/head.php', $dados);
 		$this->load->view('components/nav.php', $dados);
-		$this->load->view('dashboard.php', $dados);
 		$this->load->view('submenuprodutos.php');
 		$this->load->view('editar_produtos.php', $dados);
 		$this->load->view('components/foother.php', $dados);
