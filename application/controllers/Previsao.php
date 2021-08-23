@@ -46,7 +46,6 @@ class Previsao extends CI_Controller {
 
 		$this->load->view('components/head.php', $dados);
 		$this->load->view('components/nav.php', $dados);
-		$this->load->view('dashboard_previsao.php', $dados);
 		$this->load->view('lista_produtos.php');
 		$this->load->view('components/foother.php', $dados);		
 	}
