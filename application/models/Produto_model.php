@@ -24,7 +24,7 @@ class Produto_model extends CI_Model
     function get_all_produto()
     {
         $this->db->where('quantidade >', 0);
-        $this->db->order_by('nome', 'desc');
+        $this->db->order_by('idProduto', 'desc');
         return $this->db->get('produto')->result_array();
     }
     /*
