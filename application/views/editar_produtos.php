@@ -13,17 +13,21 @@
           		<div class="col-8">
           			<form method="post" id="form-cadastro">
           			<div class="my-3 p-3 rounded box-shadow">
-          				<h6 id="idProduto"> <?php echo $p['idProduto']; ?> </h6>
-              			<div class="input-div" id="input-valor">
-											<input class="form-control" id="nome" name="nome" type="text" required  widht="60px" placeholder="Nome: <?php echo $p['nome']; ?>" required />
+          				
+          					<div class="input-div" id="input-valor">
+											<input class="form-control" id="idProduto" name="idProduto" type="text" widht="60px" placeholder="Nome: <?php echo $p['nome']; ?>" value="<?php echo $p['idProduto']; ?>" disabled />
+										</div>
+
+              			<div class="input-div pt-1" id="input-valor">
+											<input class="form-control" id="nome" name="nome" type="text" widht="60px" placeholder="Nome: <?php echo $p['nome']; ?>" required />
 										</div>
 
 										<div class="input-div pt-1" id="input-valor">
-											<input class="form-control" id="descricao" name="descricao" type="text" required  widht="60px" placeholder="Descrição: <?php echo $p['descricao']; ?>" required />
+											<input class="form-control" id="descricao" name="descricao" type="text" widht="60px" placeholder="Descrição: <?php echo $p['descricao']; ?>" required />
 										</div>
 
 										<div class="input-div pt-1" id="input-valor">
-											<input class="form-control" id="quantidade" name="quantidade" type="text" required  widht="60px" placeholder="Estoque: <?php echo $p['quantidade']; ?>" required />
+											<input class="form-control" id="quantidade" name="quantidade" type="text" widht="60px" placeholder="Estoque: <?php echo $p['quantidade']; ?>" required />
 										</div>
 
                   	<div class="input-div pt-1" id="input-valor">
@@ -31,7 +35,7 @@
 										</div>
 
                   	<div class="input-div pt-1" id="input-valor">
-											<button class="btn btn-outline-info mb-3" type="submit" name="Alterar" value="Alterar" id="botao">Salvar</button>
+											<button class="btn btn-outline-info mb-3" type="submit" name="Alterar" id="botao">Salvar</button>
 										</div>
             		</div>
             	</form>
@@ -49,6 +53,7 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+
 
 	//Cadastrar
 	$('#botao').on('click',function(){
@@ -94,7 +99,7 @@ $(document).ready(function(){
 
 	// Mascaras nos inputs
 	$('#preco').mask('#.##0,00', {reverse: true});
-
+	console.log();
 	
 });
 
