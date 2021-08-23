@@ -71,6 +71,9 @@ $route['business_intelligence'] = 'Gestao/bi';
 // Previsão de demanda
 $route['previsao_demanda'] = 'Previsao/index';
 
+// Página Fornecedores
+$route['fornecedores'] = 'Pagina/fornecedores';
+
 // Rota do erro 404.
 $route['404_override'] = '';
 

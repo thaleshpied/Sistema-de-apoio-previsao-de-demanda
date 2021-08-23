@@ -45,13 +45,13 @@
             <a class="collapse-item" href="cards.html">Cards</a>
           </div>
         </div>
-      </li>
+      </li>-->
 
-      Nav Item - Utilities Collapse Menu -------------- 
+      <!--  Nav Item - Utilities Collapse Menu  
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
+          <span>Ferramentas</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -88,27 +88,12 @@
           <span>Previsã de Demanda</span></a>
       </li>
 
-      <!-- Nav Item - Charts 
+      <!-- Nav Item - Tables -->
       <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages2">          
-            <i class="fas fa-fw fa-chart-area"></i>
-          <span>Relatórios</span>
-        </a>
-          <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Prev. Próximo mês</a>
-            <div class="collapse-divider"></div>
-          </div>
-        </div>
-        
-      </li>-->
-
-      <!-- Nav Item - Tables 
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-table"></i>
+        <a class="nav-link" href="fornecedores">
+          <i class="fas fa-box"></i>
           <span>Fornecedores</span></a>
-      </li>-->
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -135,17 +120,17 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Topbar Search
+          <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar" aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
             </div>
-          </form> -->
+          </form> 
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">

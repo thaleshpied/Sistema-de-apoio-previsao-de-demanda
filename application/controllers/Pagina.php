@@ -29,4 +29,20 @@ class Pagina extends CI_Controller {
 		$this->load->view('components/foother.php', $dados);		
 	}
 
+	// Página Fornecedores 
+	public function fornecedores()
+	{	
+		$dados['title'] = "Sistema de Apoio à decisão";
+		$quantidadetotal = $this->Produto_model->cont_all_produto();
+		$dados['quantidadetotal'] = $quantidadetotal;
+		$produtos = $this->Produto_model->get_all_produto();
+		$dados['produtos'] = $produtos;
+		$valortotal = 0;
+		$dados['valortotal'] = $valortotal;	
+		$this->load->view('components/head.php', $dados);
+		$this->load->view('components/nav.php', $dados);
+		$this->load->view('index.php', $dados);
+		$this->load->view('components/foother.php', $dados);		
+	}
+
 }
