@@ -16,4 +16,8 @@
   <li>
     No arquivo "/application/config/database.php" faça a alteração dos dados do seu banco de dados (principalmente o nome do usário do SGBD 'username', a senha desse usuário 'password' e o nome do banco de dados 'database').
   </li>
+  <li>
+    IMPORTANTE
+    A base de dados está sendo atualizada diretamente no arquivo mmq.sql na pasta SQL disponível na raiz do projeto. Caso realize um fork do repositório, gentileza sempre restaurar o backup atualizado utilizando o arquivo
+  </li>
 </ol>
