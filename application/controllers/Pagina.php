@@ -32,7 +32,7 @@ class Pagina extends CI_Controller {
 	// Página Fornecedores 
 	public function fornecedores()
 	{	
-		$dados['title'] = "Sistema de Apoio à decisão";
+		$dados['title'] = "Fornecedores";
 		$quantidadetotal = $this->Produto_model->cont_all_produto();
 		$dados['quantidadetotal'] = $quantidadetotal;
 		$produtos = $this->Produto_model->get_all_produto();
@@ -41,6 +41,7 @@ class Pagina extends CI_Controller {
 		$dados['valortotal'] = $valortotal;	
 		$this->load->view('components/head.php', $dados);
 		$this->load->view('components/nav.php', $dados);
+		$this->load->view('fornecedores.php', $dados);
 		$this->load->view('index.php', $dados);
 		$this->load->view('components/foother.php', $dados);		
 	}
