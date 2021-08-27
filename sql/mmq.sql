@@ -181,7 +181,7 @@ CREATE TABLE `fornecedores` (
   `idFornecedor` int(11) NOT NULL,
   `nome` varchar(45) NOT NULL,
   `telefone` varchar(15) NOT NULL,
-  `endereço` int(100) NOT NULL,
+  `endereço` varchar(100) NOT NULL,
   `bairro` varchar(40) NOT NULL,
   `cidade` varchar(100) NOT NULL,
   `pais` varchar(11) NOT NULL DEFAULT '0'
