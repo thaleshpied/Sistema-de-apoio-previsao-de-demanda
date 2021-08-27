@@ -10,6 +10,18 @@
           Fornecedor <small> Dados</small>
         </a>
       </h5>
+
+      <?php foreach ($fornecedores as $p): ?>
+                            
+            <div class="media text-muted pt-3 border-bottom">
+                <p class="media-body pb-3 mb-0 small lh-125 text-body">                              
+                Nome: <?php echo $p['nome']; ?></p><br>
+                Endereço: <?php echo $p['endereço']; ?>
+            </div>                                           
+      <?php endforeach ?>                    
+                  
+
+
         
       </div>   
       <div class="col-4">
