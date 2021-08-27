@@ -177,6 +177,16 @@ ALTER TABLE `consumo_produto`
   ADD CONSTRAINT `fk_consumo_produto_produto1` FOREIGN KEY (`produto_idProduto`) REFERENCES `produto` (`idProduto`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
+CREATE TABLE `fornecedores` (
+  `idFornecedor` int(11) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `telefone` varchar(15) NOT NULL,
+  `endereço` int(100) NOT NULL,
+  `bairro` varchar(40) NOT NULL,
+  `cidade` varchar(100) NOT NULL,
+  `pais` varchar(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
