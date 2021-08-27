@@ -14,7 +14,7 @@ class Fornecedores_model extends CI_Model
     /*
      * Selecionando tudo da tabela fornecedores
      */
-    function get_all_produto()
+    function get_all_fornecedores()
     {
         $this->db->where('idFornecedor >', 0);
         $this->db->order_by('idFornecedor', 'desc');
