@@ -9,6 +9,7 @@ class Pagina extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Produto_model');
+		$this->load->model('Fornecedores_model');
 		$this->load->helper('funcoes_helper');
 	}
 
@@ -32,18 +33,10 @@ class Pagina extends CI_Controller {
 	// Página Fornecedores 
 	public function fornecedores()
 	{	
-		$dados['title'] = "Fornecedores";
-		$quantidadetotal = $this->Produto_model->cont_all_produto();
-		$dados['quantidadetotal'] = $quantidadetotal;
-		$produtos = $this->Produto_model->get_all_produto();
-		$dados['produtos'] = $produtos;
-		$valortotal = 0;
-		$dados['valortotal'] = $valortotal;	
+		$dados['title'] = "Fornecedores";	
 		$this->load->view('components/head.php', $dados);
 		$this->load->view('components/nav.php', $dados);
 		$this->load->view('fornecedores.php', $dados);
-		$this->load->view('index.php', $dados);
-		$this->load->view('components/foother.php', $dados);		
 	}
 
 }
