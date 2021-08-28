@@ -34,6 +34,9 @@ class Pagina extends CI_Controller {
 	public function fornecedores()
 	{	
 		$dados['title'] = "Fornecedores";	
+
+		$fornecedores = $this->Fornecedores_model->get_all_fornecedores();
+		$dados['fornecedores'] = $fornecedores;
 		$this->load->view('components/head.php', $dados);
 		$this->load->view('components/nav.php', $dados);
 		$this->load->view('fornecedores.php', $dados);
