@@ -100,10 +100,12 @@
                                       $B = (($SY*11)+($SXY*-2))/-286;
                                       $A = ($SY-(66*$B))/12;
                                       $PREVISAO = $A + ($B*12);
+                                      $valorfinal = (round($PREVISAO) * $p['preco']); 
 
-                                      
+                                        
                                       //Apresentando a quantidade prevista e indicando o tipo do produto
-                                      echo "<h5>Previsão para o próximo mês = ".round($PREVISAO) .$p['tipo']; 
+                                      echo "<br><h5>Quantidade para o próximo mês = ".round($PREVISAO) .$p['tipo']; 
+                                      echo "<br>Valor previsto total:" . formatar_preco($valorfinal);
                                       echo "</h5>";
                                     }
 

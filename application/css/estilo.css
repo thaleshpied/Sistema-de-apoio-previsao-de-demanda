@@ -18,3 +18,6 @@
 .fonrecedoresopcoes{
     margin-top: -64px;
 }
+.card-body{
+    cursor: pointer;
+}
