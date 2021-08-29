@@ -16,7 +16,7 @@
                 <p class="media-body pb-3 mb-0 small lh-125 text-body">                              
                 Nome: <?php echo $p['nome']; ?> - Telefone: <?php echo $p['telefone']; ?> 
                 <br>
-                Endereço: <?php echo $p['endereço']; ?>                  
+                Endereço: <?php echo $p['endereço']; ?> - <?php echo $p['cidade']; ?> - <?php echo $p['pais']; ?>                  
                 </p>
             </div>                                           
       
