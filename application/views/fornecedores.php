@@ -1,6 +1,6 @@
 <div class="row">
    <div class="col-12">
-          <a class="btn btn-success ml-2 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i><span> Novo Fornecedor</span></a>
+          <a class="btn btn-outline-success ml-2 text-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i><span> Novo Fornecedor</span></a>
     </div> 
 
 <!-- MODAL ADICIONAR NOVO FORNECEDOR -->
@@ -69,8 +69,8 @@
       
       <div>
         
-              <button class="btn btn-warning mb-1 mr-5 float-right fonrecedoresopcoes" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-pencil-alt"></i></button>
-              <button class="btn btn-danger mb-1 float-right fonrecedoresopcoes"><i class="fas fa-times"></i></button>
+              <button class="btn btn-outline-warning mb-1 mr-5 float-right fonrecedoresopcoes" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-pencil-alt"></i></button>
+              <button class="btn btn-outline-danger mb-1 float-right fonrecedoresopcoes"><i class="fas fa-times"></i></button>
       </div>
 
 
