@@ -1,7 +1,38 @@
 <div class="row">
-<div class="col-12">
-          <a href="{{url('/gerenciamento/categoria/create')}}" class="btn btn-success ml-2"><i class="fas fa-plus"></i><span> Novo Fornecedor</span></a>
-        </div>
+   <div class="col-12">
+          <a class="btn btn-success ml-2 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i><span> Novo Fornecedor</span></a>
+    </div> 
+
+<!-- MODAL ADICIONAR NOVO FORNECEDOR -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Fornecedor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="card-body">
+            <div class="input-div pt-1" id="input-valor">
+              <input class="form-control" id="nome" name="nome" type="text" widht="60px" placeholder="" required />
+            </div>
+            <div class="input-div pt-1" id="input-valor">
+              <input class="form-control" id="telefone" name="telefone" type="text" widht="60px" placeholder="" required />
+            </div>
+            <div class="input-div pt-1" id="input-valor">
+              <input class="form-control" id="endereço" name="endereço" type="text" widht="60px" placeholder="" required />
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info mb-3">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   
 </div>
@@ -12,7 +43,7 @@
 
       <?php foreach ($fornecedores as $p): ?>
                             
-            <div class="media text-muted pt-3">
+            <div class="media text-muted pt-3 border-top">
                 <p class="media-body pb-3 mb-0 small lh-125 text-body">                              
                 Nome: <?php echo $p['nome']; ?> - Telefone: <?php echo $p['telefone']; ?> 
                 <br>
