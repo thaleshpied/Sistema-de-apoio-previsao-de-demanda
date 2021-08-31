@@ -1,6 +1,6 @@
 <div class="row">
    <div class="col-12">
-          <a class="btn btn-outline-success ml-2 text-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i><span> Novo Fornecedor</span></a>
+          <a class="btn btn-outline-success ml-2 text-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i><span> Novo</span></a>
     </div> 
 
 <!-- MODAL ADICIONAR NOVO FORNECEDOR -->
@@ -65,14 +65,12 @@
                 <br>
                 Endereço: <?php echo $p['endereço']; ?> - <?php echo $p['cidade']; ?> - <?php echo $p['pais']; ?>                  
                 </p>
-            </div>                                           
       
-      <div>
-        
-              <button class="btn btn-outline-warning mb-1 mr-5 float-right fonrecedoresopcoes" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-pencil-alt"></i></button>
-              <button class="btn btn-outline-danger mb-1 float-right fonrecedoresopcoes"><i class="fas fa-times"></i></button>
+      <div>        
+              <button class="btn btn-outline-warning" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-pencil-alt"></i></button>
+              <button class="btn btn-outline-danger"><i class="fas fa-times"></i></button>
       </div>
-
+    </div>                                           
 
       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
         <div class="card-body">

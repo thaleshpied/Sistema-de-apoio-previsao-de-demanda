@@ -15,9 +15,6 @@
 #editarproduto{
     margin-left: 1px;
 }
-.fonrecedoresopcoes{
-    margin-top: -64px;
-}
-.card-body{
+.btn{
     cursor: pointer;
 }
