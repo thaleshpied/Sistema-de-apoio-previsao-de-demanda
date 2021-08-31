@@ -85,7 +85,7 @@
       <li class="nav-item">
           <a class="nav-link" href="previsao_demanda">
           <i class="fas fa-fw fa-table"></i>
-          <span>Previsã de Demanda</span></a>
+          <span>Previsão de Demanda</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
