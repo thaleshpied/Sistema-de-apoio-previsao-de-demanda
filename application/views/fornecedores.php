@@ -15,19 +15,35 @@
       </div>
       <div class="modal-body">
           <div class="card-body">
-            <div class="input-div pt-1" id="input-valor">
+            <form method="post">
+              
+            <div class="input-div pt-1" id="input-valor">Nome
               <input class="form-control" id="nome" name="nome" type="text" widht="60px" placeholder="" required />
             </div>
-            <div class="input-div pt-1" id="input-valor">
+            <div class="input-div pt-1" id="input-valor">Telefone
               <input class="form-control" id="telefone" name="telefone" type="text" widht="60px" placeholder="" required />
             </div>
-            <div class="input-div pt-1" id="input-valor">
+            <div class="input-div pt-1" id="input-valor">CEP
+              <input class="form-control" id="cep" name="cep" type="text" widht="60px" placeholder="CEP" />
+            </div>
+            <div class="input-div pt-1" id="input-valor">Endereço
               <input class="form-control" id="endereço" name="endereço" type="text" widht="60px" placeholder="" required />
             </div>
+            <div class="input-div pt-1" id="input-valor">Bairro
+              <input class="form-control" id="bairro" name="bairro" type="text" widht="60px" placeholder="" required />
+            </div>
+            <div class="input-div pt-1" id="input-valor">Cidade
+              <input class="form-control" id="cidade" name="cidade" type="text" widht="60px" placeholder="" required />
+            </div>
+            <div class="input-div pt-1" id="input-valor">País
+              <input class="form-control" id="pais" name="pais" type="text" widht="60px" placeholder="" required />
+            </div>
+
           </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-info mb-3">Salvar</button>
+        <button type="button" class="btn btn-outline-info mb-3" type="submit" name="Cadastrar" value="Cadastrar" id="botao">Salvar</button>
+        </form>
       </div>
     </div>
   </div>
