@@ -16,7 +16,7 @@ class Produtos extends CI_Controller {
 	// Página Inicial 
 	public function consultar()
 	{	
-		$dados['title'] = "Consultar Produtos";
+		$dados['title'] = "Produtos";
 		$produtos = $this->Produto_model->get_all_produto();
 		$dados['produtos'] = $produtos;
 		$quantidadetotal = $this->Produto_model->cont_all_produto();
@@ -46,7 +46,6 @@ class Produtos extends CI_Controller {
 
 		$this->load->view('components/head.php', $dados);
 		$this->load->view('components/nav.php', $dados);
-		$this->load->view('submenuprodutos.php');
 		$this->load->view('consultar_produtos.php');
 		$this->load->view('components/foother.php', $dados);		
 	}
