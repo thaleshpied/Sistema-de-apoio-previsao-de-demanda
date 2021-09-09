@@ -1,0 +1,1 @@
+//Arquivo destinao aos scripts criado na apicação para diversas situações. Efeitos, funcionais etc
