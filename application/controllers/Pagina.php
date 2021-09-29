@@ -8,15 +8,38 @@ class Pagina extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-	    $this->load->helper('funcoes_helper');
+		$this->load->model('Produto_model');
+		$this->load->model('Fornecedores_model');
+		$this->load->helper('funcoes_helper');
 	}
 
 	// Página Inicial 
 	public function index()
 	{	
-		$dados['title'] = "T H A L E S";
+		$dados['title'] = "Sistema de Apoio à decisão";
+		$quantidadetotal = $this->Produto_model->cont_all_produto();
+		$dados['quantidadetotal'] = $quantidadetotal;
+		$produtos = $this->Produto_model->get_all_produto();
+		$dados['produtos'] = $produtos;
+		$valortotal = 0;
+		$dados['valortotal'] = $valortotal;	
 		$this->load->view('components/head.php', $dados);
-		$this->load->view('index.php', $dados);	
+		$this->load->view('components/nav.php', $dados);
+		$this->load->view('dashboard.php', $dados);
+		$this->load->view('index.php', $dados);
+		$this->load->view('components/foother.php', $dados);		
+	}
+
+	// Página Fornecedores 
+	public function fornecedores()
+	{	
+		$dados['title'] = "Fornecedores";	
+
+		$fornecedores = $this->Fornecedores_model->get_all_fornecedores();
+		$dados['fornecedores'] = $fornecedores;
+		$this->load->view('components/head.php', $dados);
+		$this->load->view('components/nav.php', $dados);
+		$this->load->view('fornecedores.php', $dados);
 	}
 
 }
