@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="Thales Henrique - Desenvolvedor Web">
   <meta name="author" content="">
   <meta name="mobile-web-app-capable" content="yes">
 
@@ -23,19 +23,12 @@
   <link href="template/css/sb-admin-2.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="application/css/estilo.css" rel="stylesheet">
+  <link href="application/views/assets/css/estilo.css" rel="stylesheet">
 
-  <script src="./template/vendor/jquery/jquery.min.js"></script>
-  <script src="./template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="./template/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="./template/js/sb-admin-2.min.js"></script>
-
-  <!-- SCRIPT PARA MÁSCARA DE VALORES EM REASI (R$) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+  <!-- ABAIXO SCRIPTS SLIME -->
+  <script src="application/js/js.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"
+    integrity="sha256-HJ7j+71YYw6Kcs8THwQV9lXmPOcR0eXlg7n8KRTZsyA=" crossorigin="anonymous"></script>
 
 
 </head>

@@ -56,8 +56,19 @@ $route['default_controller'] = 'Pagina/index';
 // Consultar produtos
 $route['consultar_produtos'] = 'Produtos/consultar';
 
-// Cadastrar produtos
-$route['cadastrar_produtos'] = 'Produtos/cadastrar';
+// Cadastro de clientes
+$route['cadastro'] = 'Produtos/clientecadastro';
+
+
+
+
+
+
+
+
+
+
+
 
 // Editar produtos
 $route['editar_produtos'] = 'Produtos/editar';
