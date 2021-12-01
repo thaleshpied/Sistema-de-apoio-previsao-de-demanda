@@ -1,6 +1,6 @@
- <div class="col-12">
-          <a class="btn btn-outline-success ml-2 text-success mb-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i><span> Novo Produto</span></a>
-    </div> 
+<div class="col-12">
+  <a class="btn btn-outline-success ml-2 text-success mb-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i><span> Novo Produto</span></a>
+</div> 
 
 <!-- MODAL ADICIONAR NOVO FORNECEDOR -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -25,11 +25,6 @@
         <div class="input-div" id="input-tipo">Tipo da Unidade:
         <input class="form-control" id="tipo" name="tipo" type="text" required placeholder="Apenas letras, exemplo: cx, pct, frd." widht="50px" required min="0" minlength="2" maxlength="10" />
         </div>
-        <!-- 
-        <div class="input-div" id="input-codigoProduto">Código do produto:
-        <br><input id="codmanual" onclick="codmanual()" type="checkbox" name=""> Código manual
-        <input class="form-control" id="codigoProduto" name="codigoProduto" type="number" placeholder="Apenas número" widht="50px" required min="0" minlength="3" maxlength="10" disabled="" />
-        </div> -->
 
         <div class="input-div" id="input-estoquemax">Estoque Máximo:
         <input class="form-control" id="estoquemax" name="estoquemax" type="number" placeholder="Apenas número" widht="50px" required min="0" minlength="3" maxlength="10" />
@@ -59,20 +54,12 @@
     </form>
   </div>
 </div>
-
       </div>
         </form>
-     
     </div>
   </div>
 </div>
-
-
-
-<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
-
 <div>
-   
 
   <div class="card-header" id="headingOne">
     <div class="card row">   
@@ -162,11 +149,6 @@
       </div>   
     </div>
   </div>
-
-                  
-
-
-        
 
 <script type="text/javascript">
 
@@ -299,5 +281,4 @@ function carregarDados() {
     }
   });
 }
-
 </script>
