@@ -1,6 +1,5 @@
 <?php foreach($produtos as $p){ ?>        
-
-                  <?php ($valortotal += ($p['preco']*$p['quantidade'])); ?>
+  <?php ($valortotal += ($p['preco']*$p['quantidade'])); ?>
 <?php } ?>
            
 <!-- Begin Page Content -->
@@ -193,17 +192,7 @@
         </div>
       </div>
     </div>
-
-
-
-
-          <!-- Content Row -->
-
-
-      <!-- End of Main Content -->
-
      
-
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
